@@ -35,15 +35,15 @@ RAW_GRC_FIXES="${RAW_DATA_DIR}/grc_fixes.tsv"
 # ---------------------------------------------------------------------------
 # Test data outputs  (processed files written to TEST_DATA_DIR)
 # ---------------------------------------------------------------------------
-TEST_FASTA="${TEST_DATA_DIR}/rnacloud_test_genome.fna.gz"
-TEST_ANNOTATION="${TEST_DATA_DIR}/rnacloud_test_genome.gtf.gz"
-TEST_ASSEMBLY_REPORT="${TEST_DATA_DIR}/rnacloud_test_assembly_report.txt"
-TEST_CEN_PAR_MASK_REGIONS="${TEST_DATA_DIR}/rnacloud_test_CEN_PAR_mask_regions.txt"
-TEST_EBV_FASTA="${TEST_DATA_DIR}/rnacloud_test_EBV_genome.fna.gz"
-TEST_EBV_ANNOTATION="${TEST_DATA_DIR}/rnacloud_test_EBV_genome.gtf.gz"
-TEST_MANE_ANNOTATION="${TEST_DATA_DIR}/rnacloud_test_MANE.gtf.gz"
-TEST_GRC_FIXES="${TEST_DATA_DIR}/rnacloud_test_grc_fixes.tsv"
-TEST_CLINICALLY_RELEVANT_GENES="${TEST_DATA_DIR}/rnacloud_test_clinically_relevant_genes.tsv"
+TEST_FASTA="${TEST_DATA_DIR}/test_genome.fna.gz"
+TEST_ANNOTATION="${TEST_DATA_DIR}/test_genome.gtf.gz"
+TEST_ASSEMBLY_REPORT="${TEST_DATA_DIR}/test_assembly_report.txt"
+TEST_CEN_PAR_MASK_REGIONS="${TEST_DATA_DIR}/test_CEN_PAR_mask_regions.txt"
+TEST_EBV_FASTA="${TEST_DATA_DIR}/test_EBV_genome.fna.gz"
+TEST_EBV_ANNOTATION="${TEST_DATA_DIR}/test_EBV_genome.gtf.gz"
+TEST_MANE_ANNOTATION="${TEST_DATA_DIR}/test_MANE.gtf.gz"
+TEST_GRC_FIXES="${TEST_DATA_DIR}/test_grc_fixes.tsv"
+TEST_CLINICALLY_RELEVANT_GENES="${TEST_DATA_DIR}/test_clinically_relevant_genes.tsv"
 
 # ---------------------------------------------------------------------------
 # Sequence / field filters used during test data preparation
@@ -52,6 +52,11 @@ TEST_CLINICALLY_RELEVANT_GENES="${TEST_DATA_DIR}/rnacloud_test_clinically_releva
 # Sequence IDs retained from the main GRCh38 FASTA and GTF
 GRCH38_SEQ_IDS=(
     "NC_000015.10"   # chr15
+    "NC_000021.9"    # chr21
+    "NW_021160023.1" # chr21_ML143377v1_fix patch
+    "NW_025791813.1" # chr21_MU273390v1_fix patch
+    "NW_025791814.1" # chr21_MU273391v1_fix patch
+    "NW_025791815.1" # chr21_MU273392v1_fix patch
     "NC_000022.11"   # chr22
     "NW_021160026.1" # chr22_ML143380v1_fix patch
     "NW_015148969.2" # chr22_KQ759762v2_fix patch
@@ -60,6 +65,11 @@ GRCH38_SEQ_IDS=(
 # Chromosome names used in the MANE GTF (UCSC-style)
 MANE_CHROMS=(
     "chr15"
+    "chr21"
+    "chr21_ML143377v1_fix"
+    "chr21_MU273390v1_fix"
+    "chr21_MU273391v1_fix"
+    "chr21_MU273392v1_fix"
     "chr22"
     "chr22_ML143380v1_fix"
     "chr22_KQ759762v2_fix"
@@ -69,4 +79,8 @@ MANE_CHROMS=(
 GRC_FIX_PATCHES=(
     "HG2512_PATCH"
     "HG1311_HG2539_PATCH"
+    "HG2513_PATCH"
+    "HG2219_PATCH"
+    "HG2265_PATCH"
+    "HG2521_PATCH"
 )

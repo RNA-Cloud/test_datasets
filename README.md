@@ -32,12 +32,17 @@ Test data to be used for automated testing with the nf-core pipelines, nextflow 
 
 **Generate test data**
 ```bash
-./prep_test_data.sh
+make prep_data
 ```
 
 **Validate test data**
 ```bash
-./validate_test_data.sh
+make validate_data
+```
+
+**Prep -> Validate data**
+```bash
+make all
 ```
 
 # Usage
@@ -48,23 +53,21 @@ The configuration below can be directly used by the RNA Cloud genome reference p
 {
     "genome": {
         "provider": "NCBI Refseq",
-        "fasta_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_genomic.fna.gz",
-        "annotation_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_genomic.gtf.gz",
-        "assembly_report": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GCF_000001405.40_GRCh38.p14_assembly_report.txt",
+        "fasta_url": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_genome.fna.gz",
+        "annotation_url": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_genome.gtf.gz",
+        "assembly_report": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_assembly_report.txt",
         "assembly_report_comment_lines": 63,
-        "cen_par_mask_regions": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/405/GCF_000001405.40_GRCh38.p14/GRCh38_major_release_seqs_for_alignment_pipelines/unmasked_cognates_of_masked_CEN_PAR.txt",
-        "ebv_fasta_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/402/265/GCF_002402265.1_ASM240226v1/GCF_002402265.1_ASM240226v1_genomic.fna.gz",
-        "ebv_annotation_url": "https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/402/265/GCF_002402265.1_ASM240226v1/GCF_002402265.1_ASM240226v1_genomic.gtf.gz",
-        "refseq_mane_annotation_url": "https://ftp.ncbi.nlm.nih.gov/refseq/MANE/MANE_human/release_1.5/MANE.GRCh38.v1.5.refseq_genomic.gtf.gz"
+        "cen_par_mask_regions": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_CEN_PAR_mask_regions.txt",
+        "ebv_fasta_url": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_EBV_genome.fna.gz",
+        "ebv_annotation_url": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_EBV_genome.gtf.gz",
+        "refseq_mane_annotation_url": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_MANE.gtf.gz"
     },
     "reference": {
-        "grc_fixes": "https://github.com/kidsneuro-lab/grc_fixes_monitoring/releases/download/0.0.1/grc_fixes.tsv",
-        "clinically_relevant_genes": "https://github.com/frontier-genomics/clinically_relevant_genes/releases/download/1.0.2/results.tsv"
+        "grc_fixes": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_grc_fixes.tsv",
+        "clinically_relevant_genes": "https://github.com/RNA-Cloud/test_datasets/raw/refs/heads/rna_cloud_genome_reference/data/test_clinically_relevant_genes.tsv"
     },
     "rRNA": {
-        "NC_000021": "reference/rRNA/NC_000021.9_45S.gtf",
-        "NT_167214": "reference/rRNA/NT_167214.1.gtf",
-        "NT_187388": "reference/rRNA/NT_187388.1.gtf"
+        "NC_000021": "reference/rRNA/NC_000021.9_45S.gtf"
     },
     "ncbi_assembly_masked_regions": {
         "chr15_KN538374v1_fix": "reference/ncbi_assembly_masked_regions/chr15_KN538374v1_fix.bed"

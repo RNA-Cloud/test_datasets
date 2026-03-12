@@ -24,6 +24,11 @@ function prepare_test_fasta() {
             -p "^${GRCH38_SEQ_IDS[1]}" \
             -p "^${GRCH38_SEQ_IDS[2]}" \
             -p "^${GRCH38_SEQ_IDS[3]}" \
+            -p "^${GRCH38_SEQ_IDS[4]}" \
+            -p "^${GRCH38_SEQ_IDS[5]}" \
+            -p "^${GRCH38_SEQ_IDS[6]}" \
+            -p "^${GRCH38_SEQ_IDS[7]}" \
+            -p "^${GRCH38_SEQ_IDS[8]}" \
             "${RAW_FASTA}" \
             | gzip -c > "${TEST_FASTA}"
     fi
@@ -38,7 +43,12 @@ function prep_test_assembly_report() {
                 '$7 == "'"${GRCH38_SEQ_IDS[0]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[1]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[2]}"'" ||
-                 $7 == "'"${GRCH38_SEQ_IDS[3]}"'"' \
+                 $7 == "'"${GRCH38_SEQ_IDS[3]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[4]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[5]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[6]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[7]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[8]}"'"' \
             >> "${TEST_ASSEMBLY_REPORT}"
     fi
 }
@@ -52,7 +62,12 @@ function prepare_test_annotation() {
                  $1=="'"${GRCH38_SEQ_IDS[0]}"'" ||
                  $1=="'"${GRCH38_SEQ_IDS[1]}"'" ||
                  $1=="'"${GRCH38_SEQ_IDS[2]}"'" ||
-                 $1=="'"${GRCH38_SEQ_IDS[3]}"'"' \
+                 $1=="'"${GRCH38_SEQ_IDS[3]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[4]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[5]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[6]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[7]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[8]}"'"' \
             | gzip -c > "${TEST_ANNOTATION}"
     fi
 }
@@ -74,7 +89,12 @@ function prepare_test_mane_annotation() {
                  $1=="'"${MANE_CHROMS[0]}"'" ||
                  $1=="'"${MANE_CHROMS[1]}"'" ||
                  $1=="'"${MANE_CHROMS[2]}"'" ||
-                 $1=="'"${MANE_CHROMS[3]}"'"' \
+                 $1=="'"${MANE_CHROMS[3]}"'" ||
+                 $1=="'"${MANE_CHROMS[4]}"'" ||
+                 $1=="'"${MANE_CHROMS[5]}"'" ||
+                 $1=="'"${MANE_CHROMS[6]}"'" ||
+                 $1=="'"${MANE_CHROMS[7]}"'" ||
+                 $1=="'"${MANE_CHROMS[8]}"'"' \
             | gzip -c > "${TEST_MANE_ANNOTATION}"
     fi
 }
@@ -83,7 +103,12 @@ function prepare_test_grc_fixes() {
     echo "🏃 Preparing test GRC fixes file..."
     if [ ! -f "${TEST_GRC_FIXES}" ]; then
         awk -F"\t" \
-            '$14=="'"${GRC_FIX_PATCHES[0]}"'" || $14=="'"${GRC_FIX_PATCHES[1]}"'"' \
+            '$14=="'"${GRC_FIX_PATCHES[0]}"'" || 
+             $14=="'"${GRC_FIX_PATCHES[1]}"'" ||
+             $14=="'"${GRC_FIX_PATCHES[2]}"'" ||
+             $14=="'"${GRC_FIX_PATCHES[3]}"'" ||
+             $14=="'"${GRC_FIX_PATCHES[4]}"'" ||
+             $14=="'"${GRC_FIX_PATCHES[5]}"'"' \
             "${RAW_GRC_FIXES}" > "${TEST_GRC_FIXES}"
     fi
 }
