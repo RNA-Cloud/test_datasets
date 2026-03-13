@@ -103,7 +103,8 @@ function prepare_test_grc_fixes() {
     echo "🏃 Preparing test GRC fixes file..."
     if [ ! -f "${TEST_GRC_FIXES}" ]; then
         awk -F"\t" \
-            '$14=="'"${GRC_FIX_PATCHES[0]}"'" || 
+            'NR==1 || 
+             $14=="'"${GRC_FIX_PATCHES[0]}"'" || 
              $14=="'"${GRC_FIX_PATCHES[1]}"'" ||
              $14=="'"${GRC_FIX_PATCHES[2]}"'" ||
              $14=="'"${GRC_FIX_PATCHES[3]}"'" ||

@@ -180,6 +180,7 @@ for patch in "${GRC_FIX_PATCHES[@]}"; do
     assert_contains "${TEST_GRC_FIXES}" "${patch}" "${patch}"
 done
 # The file should NOT be a full dump (spot-check an unrelated patch)
+assert_contains "${TEST_GRC_FIXES}" "^issue_id" "GRC fixes header lines"
 assert_not_contains "${TEST_GRC_FIXES}" "HG2291_PATCH" "HG2291_PATCH (unrelated patch, should be absent)"
 
 # ── 8. EBV files — basic sanity ────────────────────────────────────────────
