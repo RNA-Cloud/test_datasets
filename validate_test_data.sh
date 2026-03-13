@@ -159,6 +159,7 @@ assert_not_contains "${TEST_ASSEMBLY_REPORT}" "NC_000001.11" "NC_000001.11 (chr1
 # ── 5. CEN/PAR mask regions — only chr22 entries ───────────────────────────
 section "5. CEN/PAR mask regions"
 
+assert_contains     "${TEST_CEN_PAR_MASK_REGIONS}" "^#masked_copy_chr_accn" "Header line"
 assert_contains     "${TEST_CEN_PAR_MASK_REGIONS}" "	chr22	\|	chr22$" "chr22 entries"
 assert_not_contains "${TEST_CEN_PAR_MASK_REGIONS}" "	chr15	"          "chr15 (should be absent)"
 

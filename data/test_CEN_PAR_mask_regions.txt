@@ -1,3 +1,4 @@
+#masked_copy_chr_accn	masked_copy_chr_name	masked_copy_start	masked_copy_stop	masked_scaf_accn	masked_scaf_or_region_name	unmasked_cognate_chr_accn	unmasked_cognate_chr_name	unmasked_cognate_start	unmasked_cognate_stop	unmasked_scaf_accn	unmasked_scaf_or_region_name
 CM000684.2	chr22	12954789	12977325	GJ212155.2	acro_4_Array_copy22	CM000675.2	chr13	16000001	16022537	GJ211955.2	acro_4_Array_copy13
 CM000684.2	chr22	12977426	12986171	ABBA01003671.1	CTG_1103279010765	CM000676.2	chr14	16096631	16105376	ABBA01003671.1	CTG_1103279010765
 CM000684.2	chr22	12994028	13011653	ABBA01003672.1	CTG_1103279021310	CM000676.2	chr14	16113233	16130858	ABBA01003672.1	CTG_1103279021310

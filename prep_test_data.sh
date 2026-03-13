@@ -75,7 +75,7 @@ function prepare_test_annotation() {
 function prepare_test_cen_par_mask_regions() {
     echo "🏃 Preparing test CEN/PAR mask regions file..."
     if [ ! -f "${TEST_CEN_PAR_MASK_REGIONS}" ]; then
-        awk -F"\t" '$2=="chr22"' "${RAW_CEN_PAR_MASK_REGIONS}" \
+        awk -F"\t" 'NR==1 || $2=="chr22"' "${RAW_CEN_PAR_MASK_REGIONS}" \
             > "${TEST_CEN_PAR_MASK_REGIONS}"
     fi
 }
