@@ -62,6 +62,7 @@
 # RefSeq is equal or derived from GenBank object.
 #
 # Sequence-Name	Sequence-Role	Assigned-Molecule	Assigned-Molecule-Location/Type	GenBank-Accn	Relationship	RefSeq-Accn	Assembly-Unit	Sequence-Length	UCSC-style-name
+1	assembled-molecule	1	Chromosome	CM000663.2	=	NC_000001.11	Primary Assembly	248956422	chr1
 15	assembled-molecule	15	Chromosome	CM000677.2	=	NC_000015.10	Primary Assembly	101991189	chr15
 21	assembled-molecule	21	Chromosome	CM000683.2	=	NC_000021.9	Primary Assembly	46709983	chr21
 22	assembled-molecule	22	Chromosome	CM000684.2	=	NC_000022.11	Primary Assembly	50818468	chr22

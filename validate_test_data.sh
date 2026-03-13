@@ -134,7 +134,7 @@ for seq_id in "${GRCH38_SEQ_IDS[@]}"; do
 done
 
 # chr1 should NOT be present
-assert_not_contains "${TEST_FASTA}" "^>NC_000001" "NC_000001 (chr1, should be absent)"
+assert_not_contains "${TEST_FASTA}" "^>NC_000002" "NC_000002 (chr2, should be absent)"
 
 # ── 3. GRCh38 GTF — correct chromosomes, header preserved ──────────────────
 section "3. GRCh38 test GTF"
@@ -144,7 +144,7 @@ for seq_id in "${GRCH38_SEQ_IDS[@]}"; do
 done
 
 assert_contains     "${TEST_ANNOTATION}" "^#" "GTF header lines"
-assert_not_contains "${TEST_ANNOTATION}" "^NC_000001	" "NC_000001 (chr1, should be absent)"
+assert_not_contains "${TEST_ANNOTATION}" "^NC_000002	" "NC_000002 (chr2, should be absent)"
 
 # ── 4. Assembly report — header lines + correct sequences ──────────────────
 section "4. Assembly report"
@@ -154,7 +154,7 @@ for seq_id in "${GRCH38_SEQ_IDS[@]}"; do
     assert_contains "${TEST_ASSEMBLY_REPORT}" "${seq_id}" "${seq_id}"
 done
 # chr1 accession should not appear
-assert_not_contains "${TEST_ASSEMBLY_REPORT}" "NC_000001.11" "NC_000001.11 (chr1, should be absent)"
+assert_not_contains "${TEST_ASSEMBLY_REPORT}" "NC_000002.12" "NC_000002.12 (chr2, should be absent)"
 
 # ── 5. CEN/PAR mask regions — only chr22 entries ───────────────────────────
 section "5. CEN/PAR mask regions"
@@ -170,7 +170,7 @@ assert_contains     "${TEST_MANE_ANNOTATION}" "^chr15	"                "chr15"
 assert_contains     "${TEST_MANE_ANNOTATION}" "^chr22	"                "chr22"
 assert_contains     "${TEST_MANE_ANNOTATION}" "^chr22_KQ759762v2_fix	" "chr22_KQ759762v2_fix"
 assert_contains     "${TEST_MANE_ANNOTATION}" "^#"                      "GTF header lines"
-assert_not_contains "${TEST_MANE_ANNOTATION}" "^chr1	"                 "chr1 (should be absent)"
+assert_not_contains "${TEST_MANE_ANNOTATION}" "^chr2	"                 "chr2 (should be absent)"
 # chr22_ML143380v1_fix has no entries in the MANE v1.5 release
 assert_not_contains "${TEST_MANE_ANNOTATION}" "^chr22_ML143380v1_fix	" "chr22_ML143380v1_fix (not in MANE v1.5)"
 

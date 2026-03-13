@@ -29,6 +29,7 @@ function prepare_test_fasta() {
             -p "^${GRCH38_SEQ_IDS[6]}" \
             -p "^${GRCH38_SEQ_IDS[7]}" \
             -p "^${GRCH38_SEQ_IDS[8]}" \
+            -p "^${GRCH38_SEQ_IDS[9]}" \
             "${RAW_FASTA}" \
             | gzip -c > "${TEST_FASTA}"
     fi
@@ -48,7 +49,8 @@ function prep_test_assembly_report() {
                  $7 == "'"${GRCH38_SEQ_IDS[5]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[6]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[7]}"'" ||
-                 $7 == "'"${GRCH38_SEQ_IDS[8]}"'"' \
+                 $7 == "'"${GRCH38_SEQ_IDS[8]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[9]}"'"' \
             >> "${TEST_ASSEMBLY_REPORT}"
     fi
 }
@@ -67,7 +69,8 @@ function prepare_test_annotation() {
                  $1=="'"${GRCH38_SEQ_IDS[5]}"'" ||
                  $1=="'"${GRCH38_SEQ_IDS[6]}"'" ||
                  $1=="'"${GRCH38_SEQ_IDS[7]}"'" ||
-                 $1=="'"${GRCH38_SEQ_IDS[8]}"'"' \
+                 $1=="'"${GRCH38_SEQ_IDS[8]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[9]}"'"' \
             | gzip -c > "${TEST_ANNOTATION}"
     fi
 }
@@ -94,7 +97,8 @@ function prepare_test_mane_annotation() {
                  $1=="'"${MANE_CHROMS[5]}"'" ||
                  $1=="'"${MANE_CHROMS[6]}"'" ||
                  $1=="'"${MANE_CHROMS[7]}"'" ||
-                 $1=="'"${MANE_CHROMS[8]}"'"' \
+                 $1=="'"${MANE_CHROMS[8]}"'" ||
+                 $1=="'"${MANE_CHROMS[9]}"'"' \
             | gzip -c > "${TEST_MANE_ANNOTATION}"
     fi
 }

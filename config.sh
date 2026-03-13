@@ -51,6 +51,7 @@ TEST_CLINICALLY_RELEVANT_GENES="${TEST_DATA_DIR}/test_clinically_relevant_genes.
 
 # Sequence IDs retained from the main GRCh38 FASTA and GTF
 GRCH38_SEQ_IDS=(
+    "NC_000001.11"   # chr1
     "NC_000015.10"   # chr15
     "NC_000021.9"    # chr21
     "NW_021160023.1" # chr21_ML143377v1_fix patch
@@ -64,6 +65,7 @@ GRCH38_SEQ_IDS=(
 
 # Chromosome names used in the MANE GTF (UCSC-style)
 MANE_CHROMS=(
+    "chr1"
     "chr15"
     "chr21"
     "chr21_ML143377v1_fix"
