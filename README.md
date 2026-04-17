@@ -110,6 +110,7 @@ Filtering rules:
 Prepared outputs:
 
 - `data/legacy_1/test_genome.fasta`
+- `data/legacy_1/test_genome.fasta.fai`
 - `data/legacy_1/test_genome.gtf.gz`
 
 Current upstream sources are defined in [`config/legacy_1.sh`](/Users/hjos9586/Projects/test_datasets/config/legacy_1.sh). The bundle is built from:

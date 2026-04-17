@@ -227,6 +227,7 @@ Raw-cache targets:
 Published outputs:
 
 - `data/legacy_1/test_genome.fasta`
+- `data/legacy_1/test_genome.fasta.fai`
 - `data/legacy_1/test_genome.gtf.gz`
 
 ### 7.3 Upstream sources
