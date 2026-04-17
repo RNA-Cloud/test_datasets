@@ -5,7 +5,7 @@
 set -e
 
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-source "${SCRIPT_DIR}/config.sh"
+source "${SCRIPT_DIR}/config/rna_cloud.sh"
 
 function download_file() {
     local url=$1

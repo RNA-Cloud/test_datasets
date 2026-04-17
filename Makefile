@@ -13,8 +13,10 @@ all: prep_data validate_data ## Prepare and validate test data files
 
 prep_data: ## Prepare test data files
 	@echo "Preparing test data files in ${TEST_DATA_DIR}..."
-	@./prep_test_data.sh
+	@./prep_rna_cloud_test_data.sh && \
+	./prep_legacy_1_test_data.sh
 
 validate_data: ## Validate the prepared test data files
 	@echo "Validating test data files in ${TEST_DATA_DIR}..."
-	@./validate_test_data.sh
+	@./validate_rna_cloud_test_data.sh && \
+	./validate_legacy_1_test_data.sh

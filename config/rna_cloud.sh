@@ -19,7 +19,7 @@ CEN_PAR_MASK_REGIONS_URL="https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/000/001/4
 EBV_FASTA_URL="https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/402/265/GCF_002402265.1_ASM240226v1/GCF_002402265.1_ASM240226v1_genomic.fna.gz"
 EBV_ANNOTATION_URL="https://ftp.ncbi.nlm.nih.gov/genomes/all/GCF/002/402/265/GCF_002402265.1_ASM240226v1/GCF_002402265.1_ASM240226v1_genomic.gtf.gz"
 MANE_ANNOTATION_URL="https://ftp.ncbi.nlm.nih.gov/refseq/MANE/MANE_human/release_1.5/MANE.GRCh38.v1.5.refseq_genomic.gtf.gz"
-GRC_FIXES_URL="https://github.com/RNA-Cloud/grc_fixes_monitoring/releases/download/0.0.8/grc_fixes.tsv"
+GRC_FIXES_URL="https://github.com/RNA-Cloud/grc_fixes_monitoring/releases/download/1.0.1/grc_fixes.tsv"
 CLINICALLY_RELEVANT_GENES_URL="https://github.com/frontier-genomics/clinically_relevant_genes/releases/download/1.0.2/results.tsv"
 
 # ---------------------------------------------------------------------------
