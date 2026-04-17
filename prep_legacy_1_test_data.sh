@@ -36,6 +36,11 @@ function prepare_test_fasta() {
         # gzip -c writes compressed output to stdout, which > redirects into TEST_FASTA
         seqkit grep -r "${patterns[@]}" "${RAW_FASTA}" > "${TEST_FASTA}"
     fi
+
+    if [ ! -f "${TEST_FASTA_INDEX}" ]; then
+        echo "🏃 Preparing FASTA index file..."
+        samtools faidx "${TEST_FASTA}"
+    fi
 }
 
 function prepare_test_annotation() {

@@ -28,6 +28,7 @@ The repository currently builds two dataset bundles:
 
 - `bash`
 - `seqkit`
+- `samtools`
 - `wget`
 - `gzip` and `gunzip`
 - `grep`
@@ -121,6 +122,7 @@ Current upstream sources are defined in [`config/legacy_1.sh`](/Users/hjos9586/P
 Filtering rules:
 
 - FASTA retains only the chromosome and alt/random contig identifiers listed in `config/legacy_1.sh`.
+- The Legacy 1 FASTA index contains one entry for each retained FASTA record.
 - GTF retains comment lines plus only records whose first column matches those same identifiers.
 - The FASTA output is plain text `.fasta`; the annotation output is gzip-compressed `.gtf.gz`.
 
@@ -129,7 +131,7 @@ Filtering rules:
 The validation scripts are the executable specification:
 
 - [`validate_rna_cloud_test_data.sh`](/Users/hjos9586/Projects/test_datasets/validate_rna_cloud_test_data.sh) checks file existence, non-emptiness, gzip integrity where applicable, expected retained identifiers, and spot-check exclusions for the RNA-Cloud bundle.
-- [`validate_legacy_1_test_data.sh`](/Users/hjos9586/Projects/test_datasets/validate_legacy_1_test_data.sh) checks file existence, non-emptiness, gzip integrity for the GTF, presence of all retained FASTA contigs, and presence of key chromosomes in the GTF for the Legacy 1 bundle.
+- [`validate_legacy_1_test_data.sh`](/Users/hjos9586/Projects/test_datasets/validate_legacy_1_test_data.sh) checks file existence, non-emptiness, gzip integrity for the GTF, presence of all retained FASTA contigs, matching FASTA index entries, and presence of key chromosomes in the GTF for the Legacy 1 bundle.
 
 ## RNA-Cloud `sources.json` Example
 

@@ -51,7 +51,7 @@ Build entry points are implemented by:
 - `prep_legacy_1_test_data.sh` removes `data/legacy_1/` before rebuilding the Legacy 1 bundle.
 - Cached downloads are reused when the configured raw file already exists.
 - Validation is local-only and operates on already prepared files.
-- `make prep_data` requires `bash`, `seqkit`, `wget`, `gzip`, `gunzip`, `grep`, `awk`, and `mkdir`.
+- `make prep_data` requires `bash`, `seqkit`, `samtools`, `wget`, `gzip`, `gunzip`, `grep`, `awk`, and `mkdir`.
 
 ## 6. RNA-Cloud Bundle
 
@@ -315,7 +315,13 @@ The Legacy 1 FASTA and GTF retain only the identifiers listed in `config/legacy_
 - The output contains only records whose headers exactly match the retained Legacy 1 identifiers.
 - The output is plain FASTA, not gzip-compressed.
 
-#### 7.6.2 `data/legacy_1/test_genome.gtf.gz`
+#### 7.6.2 `data/legacy_1/test_genome.fasta.fai`
+- Input: `data/legacy_1/test_genome.fasta`
+- Tooling: `samtools faidx`
+- The output is a FASTA index generated from the prepared Legacy 1 FASTA.
+- The output contains exactly one entry for each retained Legacy 1 identifier.
+
+#### 7.6.3 `data/legacy_1/test_genome.gtf.gz`
 - Input: `raw/legacy_1/gencode.v38.annotation.gtf.gz`
 - The output preserves header lines beginning with `#`.
 - The output contains only records whose first column equals one of the retained Legacy 1 identifiers.
@@ -324,10 +330,11 @@ The Legacy 1 FASTA and GTF retain only the identifiers listed in `config/legacy_
 ### 7.7 Validation requirements
 `validate_legacy_1_test_data.sh` must pass. It currently asserts:
 
-- both expected Legacy 1 outputs exist,
-- both outputs are non-empty,
+- all expected Legacy 1 outputs exist,
+- all expected outputs are non-empty,
 - the GTF passes `gzip -t`,
 - the FASTA contains every retained identifier from `config/legacy_1.sh`,
+- the FASTA index contains exactly one entry for every retained identifier from `config/legacy_1.sh`,
 - the GTF preserves header lines,
 - the GTF contains records for `chr1`, `chr15`, `chr21`, and `chr22`.
 

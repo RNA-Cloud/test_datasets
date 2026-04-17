@@ -25,6 +25,7 @@ RAW_ANNOTATION="${RAW_DATA_DIR}/gencode.v38.annotation.gtf.gz"
 # Test data outputs  (processed files written to TEST_DATA_DIR)
 # ---------------------------------------------------------------------------
 TEST_FASTA="${TEST_DATA_DIR}/test_genome.fasta"
+TEST_FASTA_INDEX="${TEST_FASTA}.fai"
 TEST_ANNOTATION="${TEST_DATA_DIR}/test_genome.gtf.gz"
 
 # ---------------------------------------------------------------------------

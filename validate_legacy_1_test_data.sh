@@ -43,6 +43,17 @@ assert_file_nonempty() {
     fi
 }
 
+assert_equals() {
+    local actual="$1"
+    local expected="$2"
+    local label="$3"
+    if [ "${actual}" = "${expected}" ]; then
+        pass "${label}: ${actual}"
+    else
+        fail "${label}: expected '${expected}', got '${actual}'"
+    fi
+}
+
 # Check that a gzipped file can be decompressed without error
 assert_gz_valid() {
     local file="$1"
@@ -110,29 +121,41 @@ assert_min_lines() {
 # Tests
 # ---------------------------------------------------------------------------
 
-echo "🧪 RNA-Cloud test data verification"
-echo "   Config sourced from: ${SCRIPT_DIR}/config.sh"
+echo "🧪 Legacy 1 test data verification"
+echo "   Config sourced from: ${SCRIPT_DIR}/config/legacy_1.sh"
 
 # ── 1. File existence & integrity ──────────────────────────────────────────
 section "1. File existence & integrity"
 
 for var in \
-    TEST_FASTA TEST_ANNOTATION; do
+    TEST_FASTA TEST_FASTA_INDEX TEST_ANNOTATION; do
     file="${!var}"
     assert_file_exists   "${file}"
     assert_file_nonempty "${file}"
     [[ "${file}" == *.gz ]] && assert_gz_valid "${file}"
 done
 
-# ── 2. GRCh38 FASTA — correct sequences retained ───────────────────────────
-section "2. GRCh38 test FASTA"
+# ── 2. Legacy 1 FASTA — correct sequences retained ─────────────────────────
+section "2. Legacy 1 test FASTA"
 
 for seq_id in "${GRCH38_SEQ_IDS[@]}"; do
     assert_contains "${TEST_FASTA}" "^>${seq_id}" "${seq_id}"
 done
 
-# ── 3. GRCh38 GTF — correct chromosomes, header preserved ──────────────────
-section "3. GRCh38 test GTF"
+# ── 3. Legacy 1 FASTA index — correct entries retained ─────────────────────
+section "3. Legacy 1 test FASTA index"
+
+assert_min_lines "${TEST_FASTA_INDEX}" "${#GRCH38_SEQ_IDS[@]}"
+
+index_lines=$(awk 'END { print NR }' "${TEST_FASTA_INDEX}")
+assert_equals "${index_lines}" "${#GRCH38_SEQ_IDS[@]}" "FASTA index entry count"
+
+for seq_id in "${GRCH38_SEQ_IDS[@]}"; do
+    assert_contains "${TEST_FASTA_INDEX}" "^${seq_id}	" "${seq_id}"
+done
+
+# ── 4. Legacy 1 GTF — correct chromosomes, header preserved ────────────────
+section "4. Legacy 1 test GTF"
 
 assert_contains     "${TEST_ANNOTATION}" "^#" "GTF header lines"
 assert_contains     "${TEST_ANNOTATION}" "^chr1	" "chr1 (chr1, should be present)"

@@ -40,7 +40,7 @@ Treat each bundle as an independently versioned downstream contract with its own
 5. Update `README.md` and `docs/SPECIFICATION.md` whenever the externally visible contract changes.
 
 ## Environment assumptions
-- Required tools: `bash`, `seqkit`, `wget`, `gzip`, `gunzip`, `grep`, `awk`, `mkdir`.
+- Required tools: `bash`, `seqkit`, `samtools`, `wget`, `gzip`, `gunzip`, `grep`, `awk`, `mkdir`.
 - Network access is required for `make prep_data` when a required cached input is missing or when a direct-to-output download is absent.
 - Validation is local-only and should pass without network access if the expected outputs already exist.
 
