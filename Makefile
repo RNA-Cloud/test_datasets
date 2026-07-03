@@ -18,5 +18,6 @@ prep_data: ## Prepare test data files
 
 validate_data: ## Validate the prepared test data files
 	@echo "Validating test data files in ${TEST_DATA_DIR}..."
-	@./validate_rna_cloud_test_data.sh && \
-	./validate_legacy_1_test_data.sh
+	@mkdir -p logs
+	@bash -o pipefail -c './validate_rna_cloud_test_data.sh 2>&1 | tee logs/validate_rna_cloud_test_data.log' && \
+	bash -o pipefail -c './validate_legacy_1_test_data.sh 2>&1 | tee logs/validate_legacy_1_test_data.log'

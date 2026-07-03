@@ -122,7 +122,7 @@ assert_min_lines() {
 # ---------------------------------------------------------------------------
 
 echo "🧪 Legacy 1 test data verification"
-echo "   Config sourced from: ${SCRIPT_DIR}/config/legacy_1.sh"
+echo "   Config sourced from: config/legacy_1.sh"
 
 # ── 1. File existence & integrity ──────────────────────────────────────────
 section "1. File existence & integrity"

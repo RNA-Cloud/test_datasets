@@ -30,6 +30,8 @@ function prepare_test_fasta() {
             -p "^${GRCH38_SEQ_IDS[7]}" \
             -p "^${GRCH38_SEQ_IDS[8]}" \
             -p "^${GRCH38_SEQ_IDS[9]}" \
+            -p "^${GRCH38_SEQ_IDS[10]}" \
+            -p "^${GRCH38_SEQ_IDS[11]}" \
             "${RAW_FASTA}" \
             | gzip -c > "${TEST_FASTA}"
     fi
@@ -50,13 +52,9 @@ function prep_test_assembly_report() {
                  $7 == "'"${GRCH38_SEQ_IDS[6]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[7]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[8]}"'" ||
-                 $7 == "'"${GRCH38_SEQ_IDS[9]}"'"' \
-            >> "${TEST_ASSEMBLY_REPORT}"
-
-        grep -v '^#' "${RAW_ASSEMBLY_REPORT}" \
-            | awk -F"\t" \
-                '$7 == "'"${RRNA_SEQ_IDS[0]}"'" ||
-                 $7 == "'"${RRNA_SEQ_IDS[1]}"'"' \
+                 $7 == "'"${GRCH38_SEQ_IDS[9]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[10]}"'" ||
+                 $7 == "'"${GRCH38_SEQ_IDS[11]}"'"' \
             >> "${TEST_ASSEMBLY_REPORT}"
     fi
 }
@@ -76,7 +74,9 @@ function prepare_test_annotation() {
                  $1=="'"${GRCH38_SEQ_IDS[6]}"'" ||
                  $1=="'"${GRCH38_SEQ_IDS[7]}"'" ||
                  $1=="'"${GRCH38_SEQ_IDS[8]}"'" ||
-                 $1=="'"${GRCH38_SEQ_IDS[9]}"'"' \
+                 $1=="'"${GRCH38_SEQ_IDS[9]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[10]}"'" ||
+                 $1=="'"${GRCH38_SEQ_IDS[11]}"'"' \
             | gzip -c > "${TEST_ANNOTATION}"
     fi
 }

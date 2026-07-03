@@ -61,11 +61,8 @@ GRCH38_SEQ_IDS=(
     "NC_000022.11"   # chr22
     "NW_021160026.1" # chr22_ML143380v1_fix patch
     "NW_015148969.2" # chr22_KQ759762v2_fix patch
-)
-
-RRNA_SEQ_IDS=(
-    "NT_167214.1"
-    "NT_187388.1"
+    "NT_167214.1"    # rRNA contig chrUn_GL000220v1
+    "NT_187388.1"    # rRNA contig chr22_KI270733v1_random
 )
 
 # Chromosome names used in the MANE GTF (UCSC-style)

@@ -1,0 +1,111 @@
+🧪 RNA-Cloud test data verification
+   Config sourced from: config/rna_cloud.sh
+
+━━━ 1. File existence & integrity ━━━
+  ✅ PASS: File exists: data/test_genome.fna.gz
+  ✅ PASS: File is non-empty: data/test_genome.fna.gz
+  ✅ PASS: Valid gzip: data/test_genome.fna.gz
+  ✅ PASS: File exists: data/test_genome.gtf.gz
+  ✅ PASS: File is non-empty: data/test_genome.gtf.gz
+  ✅ PASS: Valid gzip: data/test_genome.gtf.gz
+  ✅ PASS: File exists: data/test_assembly_report.txt
+  ✅ PASS: File is non-empty: data/test_assembly_report.txt
+  ✅ PASS: File exists: data/test_CEN_PAR_mask_regions.txt
+  ✅ PASS: File is non-empty: data/test_CEN_PAR_mask_regions.txt
+  ✅ PASS: File exists: data/test_EBV_genome.fna.gz
+  ✅ PASS: File is non-empty: data/test_EBV_genome.fna.gz
+  ✅ PASS: Valid gzip: data/test_EBV_genome.fna.gz
+  ✅ PASS: File exists: data/test_EBV_genome.gtf.gz
+  ✅ PASS: File is non-empty: data/test_EBV_genome.gtf.gz
+  ✅ PASS: Valid gzip: data/test_EBV_genome.gtf.gz
+  ✅ PASS: File exists: data/test_MANE.gtf.gz
+  ✅ PASS: File is non-empty: data/test_MANE.gtf.gz
+  ✅ PASS: Valid gzip: data/test_MANE.gtf.gz
+  ✅ PASS: File exists: data/test_grc_fixes.tsv
+  ✅ PASS: File is non-empty: data/test_grc_fixes.tsv
+  ✅ PASS: File exists: data/test_clinically_relevant_genes.tsv
+  ✅ PASS: File is non-empty: data/test_clinically_relevant_genes.tsv
+
+━━━ 2. GRCh38 test FASTA ━━━
+  ✅ PASS: Contains 'NC_000001.11': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NC_000015.10': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NC_000021.9': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NW_021160023.1': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NW_025791813.1': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NW_025791814.1': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NW_025791815.1': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NC_000022.11': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NW_021160026.1': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NW_015148969.2': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NT_167214.1': data/test_genome.fna.gz
+  ✅ PASS: Contains 'NT_187388.1': data/test_genome.fna.gz
+  ✅ PASS: Correctly excludes 'NC_000002 (chr2, should be absent)': data/test_genome.fna.gz
+
+━━━ 3. GRCh38 test GTF ━━━
+  ✅ PASS: Contains 'NC_000001.11': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NC_000015.10': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NC_000021.9': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NW_021160023.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NW_025791813.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NW_025791814.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NW_025791815.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NC_000022.11': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NW_021160026.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NW_015148969.2': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NT_167214.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'NT_187388.1': data/test_genome.gtf.gz
+  ✅ PASS: Contains 'GTF header lines': data/test_genome.gtf.gz
+  ✅ PASS: Correctly excludes 'NC_000002 (chr2, should be absent)': data/test_genome.gtf.gz
+
+━━━ 4. Assembly report ━━━
+  ✅ PASS: Contains 'header comment lines': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NC_000001.11': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NC_000015.10': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NC_000021.9': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NW_021160023.1': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NW_025791813.1': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NW_025791814.1': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NW_025791815.1': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NC_000022.11': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NW_021160026.1': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NW_015148969.2': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NT_167214.1': data/test_assembly_report.txt
+  ✅ PASS: Contains 'NT_187388.1': data/test_assembly_report.txt
+  ✅ PASS: Correctly excludes 'NC_000002.12 (chr2, should be absent)': data/test_assembly_report.txt
+
+━━━ 5. CEN/PAR mask regions ━━━
+  ✅ PASS: Contains 'Header line': data/test_CEN_PAR_mask_regions.txt
+  ✅ PASS: Contains 'chr22 entries': data/test_CEN_PAR_mask_regions.txt
+  ✅ PASS: Correctly excludes 'chr15 (should be absent)': data/test_CEN_PAR_mask_regions.txt
+
+━━━ 6. MANE annotation GTF ━━━
+  ✅ PASS: Contains 'chr15': data/test_MANE.gtf.gz
+  ✅ PASS: Contains 'chr22': data/test_MANE.gtf.gz
+  ✅ PASS: Contains 'chr22_KQ759762v2_fix': data/test_MANE.gtf.gz
+  ✅ PASS: Contains 'GTF header lines': data/test_MANE.gtf.gz
+  ✅ PASS: Correctly excludes 'chr2 (should be absent)': data/test_MANE.gtf.gz
+  ✅ PASS: Correctly excludes 'chr22_ML143380v1_fix (not in MANE v1.5)': data/test_MANE.gtf.gz
+  ✅ PASS: Correctly excludes 'chrUn_GL000220v1 (not in MANE v1.5)': data/test_MANE.gtf.gz
+  ✅ PASS: Correctly excludes 'chr22_KI270733v1_random (not in MANE v1.5)': data/test_MANE.gtf.gz
+
+━━━ 7. GRC fixes ━━━
+  ✅ PASS: Contains 'HG2512_PATCH': data/test_grc_fixes.tsv
+  ✅ PASS: Contains 'HG1311_HG2539_PATCH': data/test_grc_fixes.tsv
+  ✅ PASS: Contains 'HG2513_PATCH': data/test_grc_fixes.tsv
+  ✅ PASS: Contains 'HG2219_PATCH': data/test_grc_fixes.tsv
+  ✅ PASS: Contains 'HG2265_PATCH': data/test_grc_fixes.tsv
+  ✅ PASS: Contains 'HG2521_PATCH': data/test_grc_fixes.tsv
+  ✅ PASS: Contains 'GRC fixes header lines': data/test_grc_fixes.tsv
+  ✅ PASS: Correctly excludes 'HG2291_PATCH (unrelated patch, should be absent)': data/test_grc_fixes.tsv
+
+━━━ 8. EBV FASTA & GTF ━━━
+  ✅ PASS: Contains 'FASTA header': data/test_EBV_genome.fna.gz
+  ✅ PASS: Contains 'EBV accession or header': data/test_EBV_genome.gtf.gz
+  ✅ PASS: Line count      685 >= 10: data/test_EBV_genome.gtf.gz
+
+━━━ 9. Clinically relevant genes TSV ━━━
+  ✅ PASS: Line count     4587 >= 2: data/test_clinically_relevant_genes.tsv
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Results: 87/87 checks passed
+  🎉 All checks passed!

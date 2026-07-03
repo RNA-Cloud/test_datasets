@@ -120,8 +120,6 @@ The main GRCh38 FASTA, GTF, and assembly report retain only:
 - `NC_000022.11`
 - `NW_021160026.1`
 - `NW_015148969.2`
-
-rRNA Seq IDs
 - `NT_167214.1`
 - `NT_187388.1`
 

@@ -111,7 +111,7 @@ assert_min_lines() {
 # ---------------------------------------------------------------------------
 
 echo "🧪 RNA-Cloud test data verification"
-echo "   Config sourced from: ${SCRIPT_DIR}/config.sh"
+echo "   Config sourced from: config/rna_cloud.sh"
 
 # ── 1. File existence & integrity ──────────────────────────────────────────
 section "1. File existence & integrity"
@@ -173,6 +173,8 @@ assert_contains     "${TEST_MANE_ANNOTATION}" "^#"                      "GTF hea
 assert_not_contains "${TEST_MANE_ANNOTATION}" "^chr2	"                 "chr2 (should be absent)"
 # chr22_ML143380v1_fix has no entries in the MANE v1.5 release
 assert_not_contains "${TEST_MANE_ANNOTATION}" "^chr22_ML143380v1_fix	" "chr22_ML143380v1_fix (not in MANE v1.5)"
+assert_not_contains "${TEST_MANE_ANNOTATION}" "^chrUn_GL000220v1	" "chrUn_GL000220v1 (not in MANE v1.5)"
+assert_not_contains "${TEST_MANE_ANNOTATION}" "^chr22_KI270733v1_random	" "chr22_KI270733v1_random (not in MANE v1.5)"
 
 # ── 7. GRC fixes — correct patches only ────────────────────────────────────
 section "7. GRC fixes"

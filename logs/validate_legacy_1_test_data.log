@@ -1,0 +1,150 @@
+🧪 Legacy 1 test data verification
+   Config sourced from: config/legacy_1.sh
+
+━━━ 1. File existence & integrity ━━━
+  ✅ PASS: File exists: data/legacy_1/test_genome.fasta
+  ✅ PASS: File is non-empty: data/legacy_1/test_genome.fasta
+  ✅ PASS: File exists: data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: File is non-empty: data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: File exists: data/legacy_1/test_genome.gtf.gz
+  ✅ PASS: File is non-empty: data/legacy_1/test_genome.gtf.gz
+  ✅ PASS: Valid gzip: data/legacy_1/test_genome.gtf.gz
+
+━━━ 2. Legacy 1 test FASTA ━━━
+  ✅ PASS: Contains 'chr1': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_GL383518v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_GL383519v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_GL383520v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270706v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270707v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270708v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270709v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270710v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270711v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270712v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270713v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270714v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270759v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270760v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270761v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270762v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270763v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270764v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270765v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270766v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr1_KI270892v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_GL383554v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_GL383555v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270727v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270848v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270849v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270850v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270851v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270852v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270905v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr15_KI270906v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_GL383578v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_GL383579v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_GL383580v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_GL383581v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_KI270872v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_KI270873v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr21_KI270874v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_GL383582v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_GL383583v2_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KB663609v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270731v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270732v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270733v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270734v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270735v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270736v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270737v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270738v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270739v1_random': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270875v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270876v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270877v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270878v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270879v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chr22_KI270928v1_alt': data/legacy_1/test_genome.fasta
+  ✅ PASS: Contains 'chrEBV': data/legacy_1/test_genome.fasta
+
+━━━ 3. Legacy 1 test FASTA index ━━━
+  ✅ PASS: Line count       61 >= 61: data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: FASTA index entry count: 61
+  ✅ PASS: Contains 'chr1': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_GL383518v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_GL383519v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_GL383520v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270706v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270707v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270708v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270709v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270710v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270711v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270712v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270713v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270714v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270759v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270760v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270761v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270762v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270763v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270764v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270765v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270766v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr1_KI270892v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_GL383554v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_GL383555v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270727v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270848v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270849v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270850v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270851v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270852v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270905v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr15_KI270906v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_GL383578v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_GL383579v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_GL383580v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_GL383581v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_KI270872v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_KI270873v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr21_KI270874v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_GL383582v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_GL383583v2_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KB663609v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270731v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270732v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270733v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270734v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270735v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270736v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270737v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270738v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270739v1_random': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270875v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270876v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270877v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270878v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270879v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chr22_KI270928v1_alt': data/legacy_1/test_genome.fasta.fai
+  ✅ PASS: Contains 'chrEBV': data/legacy_1/test_genome.fasta.fai
+
+━━━ 4. Legacy 1 test GTF ━━━
+  ✅ PASS: Contains 'GTF header lines': data/legacy_1/test_genome.gtf.gz
+  ✅ PASS: Contains 'chr1 (chr1, should be present)': data/legacy_1/test_genome.gtf.gz
+  ✅ PASS: Contains 'chr15 (chr15, should be present)': data/legacy_1/test_genome.gtf.gz
+  ✅ PASS: Contains 'chr21 (chr21, should be present)': data/legacy_1/test_genome.gtf.gz
+  ✅ PASS: Contains 'chr22 (chr22, should be present)': data/legacy_1/test_genome.gtf.gz
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Results: 136/136 checks passed
+  🎉 All checks passed!
