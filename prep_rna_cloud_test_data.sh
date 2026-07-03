@@ -52,6 +52,12 @@ function prep_test_assembly_report() {
                  $7 == "'"${GRCH38_SEQ_IDS[8]}"'" ||
                  $7 == "'"${GRCH38_SEQ_IDS[9]}"'"' \
             >> "${TEST_ASSEMBLY_REPORT}"
+
+        grep -v '^#' "${RAW_ASSEMBLY_REPORT}" \
+            | awk -F"\t" \
+                '$7 == "'"${RRNA_SEQ_IDS[0]}"'" ||
+                 $7 == "'"${RRNA_SEQ_IDS[1]}"'"' \
+            >> "${TEST_ASSEMBLY_REPORT}"
     fi
 }
 

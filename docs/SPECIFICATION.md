@@ -121,6 +121,10 @@ The main GRCh38 FASTA, GTF, and assembly report retain only:
 - `NW_021160026.1`
 - `NW_015148969.2`
 
+rRNA Seq IDs
+- `NT_167214.1`
+- `NT_187388.1`
+
 #### 6.5.2 MANE retained chromosome names
 The MANE GTF retains only:
 
